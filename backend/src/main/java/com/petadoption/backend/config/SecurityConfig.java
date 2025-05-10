@@ -32,8 +32,10 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .requestMatchers("/api/auth/register", "/api/auth/login").permitAll()
                 .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/pets").permitAll()
+                .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/pets/**").permitAll()
                 .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/pets").hasAnyRole("ADMIN", "SELLER")
                 .requestMatchers("/api/pets/search").permitAll()
                 .requestMatchers("/api/pets/{id}").permitAll()
