@@ -17,7 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/pets")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://pet-adoptionf.vercel.app")
 public class PetController {
     private final PetService petService;
     private static final Logger logger = LoggerFactory.getLogger(PetController.class);

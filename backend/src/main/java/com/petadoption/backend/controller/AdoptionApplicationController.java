@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/adoptions")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://pet-adoptionf.vercel.app")
 public class AdoptionApplicationController {
     private final AdoptionApplicationService service;
 
