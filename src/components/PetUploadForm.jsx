@@ -1,0 +1,3 @@
+const response = await fetch(`https://pet-adoptionb.onrender.com/api/pets`, {
+  // ... rest of the fetch call ...
+}); 

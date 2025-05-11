@@ -1,3 +1,5 @@
+const API_BASE = "https://pet-adoptionb.onrender.com/api";
+
 const register = async (formData) => {
   try {
     console.log('API URL:', API_BASE);
